@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { BookContext } from "../contexts/BookContext";
 
 const Navbar = () => {
+  const { books } = useContext(BookContext);
   return (
-    <navbar>
-      <h1>TODO APP</h1>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </navbar>
+    <div className="navbar">
+      <h1>Juliano Library</h1>
+      <p>You have {books.length} books.</p>
+    </div>
   );
 };
 
